@@ -67,7 +67,7 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
 .main_title > span {display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; border-right: 3px solid transparent;}
 .main_title > span:nth-child(1) {width: 23ch; animation: typeTitle1 12s forwards;}
 .main_title > span:nth-child(2) {width: 18ch; animation: typeTitle2 12s forwards;}
-.main_title > span:nth-child(3) {width: 1ch; animation: typeTitle3 12s forwards, cursorBlink 1s infinite 12s;}
+.main_title > span:nth-child(3) {width: 1ch; animation: typeTitle3 12s forwards, cursorBlink 1s infinite 5.8s;}
 
 @keyframes typeTitle1 {
   0% {width: 0; border-color: transparent; animation-timing-function: steps(1, end);}
