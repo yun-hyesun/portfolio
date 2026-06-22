@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 모든 요소의 테두리와 여백을 리셋하고, 크기 계산을 직관적으로 변경 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 바디의 기본 줄바꿈 및 서체 설정 */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 리스트 스타일 제거 */
+ol, ul {
+  list-style: none;
+}
+
+/* 링크 스타일 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지 및 미디어 요소의 기본 정렬 및 반응형 설정 */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 폼 요소들의 폰트 상속 */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 버튼의 기본 배경과 테두리 제거 */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

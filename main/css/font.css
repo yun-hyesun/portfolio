@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Pretendard-M";
+  src: url(../font/Pretendard-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-EB";
+  src: url(../font/Pretendard-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "EliceDigitalCodingverH-R";
+  src: url(../font/EliceDigitalCodingverH_Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "EliceDigitalCodingverH-B";
+  src: url(../font/EliceDigitalCodingverH_Bold.woff) format("woff");
+}
