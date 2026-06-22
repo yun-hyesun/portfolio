@@ -15,6 +15,9 @@ html {overflow-x: hidden;}
 #wrap {width: 100%; height: 100%; background-color: var(--color-bg);}
 .blind {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap;}
 section, footer {height: auto; min-height: 100vh; position: relative; padding: 10%;}
+/* scroll */
+::-webkit-scrollbar {width: 7px; background-color: var(--color-bg); border-radius: 10px;}
+::-webkit-scrollbar-thumb {background-color: #E6B64F; border-radius: 10px; cursor: pointer;}   
 
 /* scroll reveal */
 .reveal {opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease;}
@@ -64,7 +67,7 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
 .main_title > span {display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; border-right: 3px solid transparent;}
 .main_title > span:nth-child(1) {width: 23ch; animation: typeTitle1 12s forwards;}
 .main_title > span:nth-child(2) {width: 18ch; animation: typeTitle2 12s forwards;}
-.main_title > span:nth-child(3) {width: 1ch; animation: typeTitle3 12s forwards;}
+.main_title > span:nth-child(3) {width: 1ch; animation: typeTitle3 12s forwards, cursorBlink 1s infinite 12s;}
 
 @keyframes typeTitle1 {
   0% {width: 0; border-color: transparent; animation-timing-function: steps(1, end);}
@@ -85,6 +88,10 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
   45% {width: 0; border-color: #fff; animation-timing-function: steps(2, end);}
   48.33% {width: 1ch; border-color: #fff;}
   100% {width: 1ch; border-color: #fff;}
+}
+@keyframes cursorBlink {
+  0%, 50% {border-color: #fff;}
+  50.01%, 100% {border-color: transparent;}
 }
 .main > [class*="main_bg"] {font-size: 14px; white-space: nowrap;}
 .main_bg_left {position: fixed; display: flex; flex-direction: column; top: 0; left: 0; color: #646464; padding: 0px 20px;}
@@ -149,7 +156,7 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
 
 /* skills */
 .skills {display: flex; justify-content: center; align-items: center;}
-.skills_cont {display: flex; flex-wrap: wrap; justify-content: center; gap: 7em 5em;}
+.skills_cont {display: grid; grid-template-columns: repeat(4, 1fr); gap: 7em 5em;}
 .skills_cont_list {width: 220px; display: flex; flex-direction: column; align-items: center; gap: 3em;}
 .skills_cont_list > img {width: 90px;}
 .skills_cont_list > p {font-family: var(--font-main); color: #fff; font-size: 18px; text-align: center; word-break: keep-all;}
@@ -162,7 +169,7 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
 .portfolio_cont_list:nth-child(3) {z-index: 3;}
 .portfolio_cont_list:nth-child(4) {z-index: 4;}
 .portfolio_cont_list_img {width: 35%;}
-.portfolio_cont_list_txt {max-width: 60%;}
+.portfolio_cont_list_txt {max-width: 40%;}
 .portfolio_cont_list_txt > h3 {font-size: 24px; margin-bottom: 1em; font-weight: normal;}
 .portfolio_cont_list_txt .txt_top {margin-bottom: 1em;}
 .portfolio_cont_list_txt .txt_top_row {display: flex; }
@@ -179,6 +186,9 @@ section, footer {height: auto; min-height: 100vh; position: relative; padding: 1
 .contact_cont_list > dd {font-family: var(--font-point); color: #e6b64f; font-size: 18px; padding: 2%; white-space: nowrap;}
 
 /**************************** 반응형 ****************************/
+@media (max-width: 1440px) { 
+  .skills_cont {display: flex; flex-wrap: wrap; justify-content: center;}
+}
 
 @media (max-width: 1251px) { 
   .about_cont_list_1 {order: 0; margin-bottom: 10%;}
